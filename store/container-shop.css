@@ -1,0 +1,136 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}/* Это обнуляет отступы и внутренние отступы у всех элементов, что предотвращает неожиданные изменения вёрстки. */
+
+:root {
+    /* color */
+    --background: #FAF5FF;
+    --white: #fff;
+    --black: #000;
+    --color: #061520;
+    --color-hover: #4070f4;
+    --color-button: # ;
+    /* text */
+    --text-1: 1rem;
+    --text-1-3: 1.3rem;
+    --text-1-5: 1.5rem;
+    --text-1-8: 1.8rem;
+    --text-2: 2rem;
+    --text-2-3: 2.3rem;
+    --text-2-5: 2.5rem;
+    --text-2-8: 2.8rem;
+    --text-3: 3rem;
+    --icon: 1.8rem;
+}
+
+body {
+    min-height: 100vh; 
+    background: var(--background);
+    font-family: 'SF Pro Display', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-shop {
+    margin-top: 100px; /* Adjust this value as needed */
+    padding: 20px; /* Optional: add padding for spacing */
+}
+
+/* Стили для контейнера карточек продуктов */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Changed to space-around for better distribution */
+    gap: 20px; /* добавлено пространство между карточками */
+}
+
+/* Общий стиль для каждого продукта */
+.product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px; /* Reduced width for better spacing */
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    overflow: hidden; /* Ensure contents do not overflow */
+    transition: transform 0.3s ease; /* Add a smooth transition */
+}
+
+.product:hover {
+    transform: translateY(-5px); 
+}
+
+/* Стили для изображения продукта */
+.image-product img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+/* Стили для названия продукта */
+.info {
+    padding: 20px; 
+    text-align: center; 
+}
+
+.info h3 {
+    font-size: 1.2rem; 
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 0.9rem; 
+    color: var(--color);
+}
+
+/* Стили для списка рейтинга */
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.rating li {
+    color: var(--color-2); /* Adjusted star color */
+    font-size: 20px; /* Adjusted star size */
+    margin-right: 5px; /* Added space between stars */
+}
+
+/* Контейнер для цены и кнопки "Добавить в корзину" */
+.info-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 20px; 
+    background-color: var(--white);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+/* Стили для кнопки "Добавить в корзину" */
+.add-to-cart {
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    color: var(--color);
+    border-radius: 50%; /* Circle button */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: var(--color-hover);
+}
